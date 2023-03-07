@@ -1,4 +1,31 @@
-* {
+body {
+  background-color: #101010;
+  color: #D5F2E3;
+  font-family: 'PT Sans', sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  min-height: 15vh;
+}
+
+main {
+  min-height: 80vh;
+}
+
+header, main {
+  background-color: #105050;
+}
+
+a.btn {
+  color: #73BA9B;
+}
+
+a.brn:hover {
+  color: #D5F2E3;
+}
+
+/* * {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
@@ -84,4 +111,4 @@ button {
 .xmlinput, .xmloutput {
   color: black;
   padding: 5px;
-}
+} */
