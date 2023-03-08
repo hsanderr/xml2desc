@@ -109,7 +109,9 @@ function myFunction() {
     document.getElementById('out').value += ts_str[i];
     document.getElementById('out').value += ' ';
     document.getElementById('out').value += y[i];
-    document.getElementById('out').value += '\n';
+    if (i !== y.length - 1) {
+      document.getElementById('out').value += '\n';
+    }
   }
   if (document.getElementById('out').value.length < 1) {
     document.getElementById('out').value = 'Este vídeo não tem capítulos.';
