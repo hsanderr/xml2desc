@@ -1,28 +1,24 @@
 body {
-  background-color: #101010;
+  background-color: #105050;
   color: #D5F2E3;
   font-family: 'PT Sans', sans-serif;
-  min-height: 100vh;
-}
-
-header {
-  min-height: 15vh;
-}
-
-main {
-  min-height: 80vh;
-}
-
-header, main {
-  background-color: #105050;
 }
 
 a.btn {
   color: #73BA9B;
 }
 
-a.brn:hover {
+a.btn:hover {
   color: #D5F2E3;
+}
+
+.btn-success {
+  border: none;
+  background-color: #D1345B;
+}
+
+.btn-success:hover {
+  background-color: #AB2346;
 }
 
 /* * {
