@@ -38,7 +38,7 @@ if (!mobileCheck()) {
     // here we tell the reader what to do when it's done reading...
     reader.onload = (readerEvent) => {
       var content = readerEvent.target.result; // this is the content!
-      document.getElementById('in').value = contents;
+      document.getElementById('in').value = content;
     };
   };
 }
