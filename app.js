@@ -29,7 +29,7 @@ if (!mobileCheck()) {
   });
   document.getElementById('mobileFileInput').onchange = (evt) => {
     // getting a hold of the file reference
-    var file = e.target.files[0];
+    var file = evt.target.files[0];
 
     // setting up the reader
     var reader = new FileReader();
@@ -66,7 +66,7 @@ function myFunction() {
   while ((result2 = regex2.exec(x))) {
     ind2.push(result2.index);
   }
-  document.getElementById('out').innerHTML = '';
+  document.getElementById('out').innerText = '';
   var y = [],
     t = [],
     th = [],
@@ -101,15 +101,18 @@ function myFunction() {
   }
   for (i = 0; i < y.length; i++) {
     if (th.some(notEqualToZero) === true) {
-      document.getElementById('out').innerHTML += th_str[i];
-      document.getElementById('out').innerHTML += ':';
+      document.getElementById('out').value += th_str[i];
+      document.getElementById('out').value += ':';
     }
-    document.getElementById('out').innerHTML += tmin_str[i];
-    document.getElementById('out').innerHTML += ':';
-    document.getElementById('out').innerHTML += ts_str[i];
-    document.getElementById('out').innerHTML += '&nbsp';
-    document.getElementById('out').innerHTML += y[i];
-    document.getElementById('out').innerHTML += '\n';
+    document.getElementById('out').value += tmin_str[i];
+    document.getElementById('out').value += ':';
+    document.getElementById('out').value += ts_str[i];
+    document.getElementById('out').value += ' ';
+    document.getElementById('out').value += y[i];
+    document.getElementById('out').value += '\n';
+  }
+  if (document.getElementById('out').value.length < 1) {
+    document.getElementById('out').value = 'Este vídeo não tem capítulos.';
   }
 }
 
